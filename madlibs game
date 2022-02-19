@@ -1,0 +1,18 @@
+
+# this is the game that you can play with any words! Enjoy yourself!
+
+adj1 = input("Adjective: ")
+adj2 = input("Adjective: ")
+adj3 = input("Adjective: ")
+adj4 = input("Adjective: ")
+adj5 = input("Adjective: ")
+noun = input ("Noun: ")
+famous_person  = input ("Famous person: ")
+
+madlib = f" I am a {adj1}, {adj2}, {noun}. I think computer programming is so {adj3}! It makes me so good because it is {adj4}. Stay hydrated and {adj5} like you are {famous_person} from TW !"
+
+print(madlib)
+
+
+
+
