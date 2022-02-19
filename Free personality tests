@@ -1,0 +1,44 @@
+print('Hallo! Welcome to the personality tests!')
+
+name = input ('What is your name?')
+#age = input ('What is your age?')
+age = int(input('what is your age?'))
+health = 10
+print('Hi', name, 'you are', age, 'years old', 'and you now have', health, 'health')
+
+
+# the input auto assume all the inputs you type are string, so you need to int() the age to make it works 
+
+#is_older = int(age) >=  18 
+#print(is_older)
+
+
+if age >= 18:
+  print('You are old enough to learn about your personality type!')
+
+  wants_to_play = input('Do you want to play? '). lower()
+  if wants_to_play == 'yes':
+    print('let us play!')
+
+    e_or_i = input('Do you enjoy socialising or living alone more? (social/alone)')
+    if e_or_i == 'social':
+      ans = input ('you are eligible to join the entravert family. Do you like to trust your feeling or thinking more? (feeling/thinking)' )
+
+      if ans == 'feeling':
+        print('you are a EF')
+      elif ans == 'thinking':
+        print('you are a ET')
+
+    
+      
+      else:
+        print('bro you can only answer feeling or thinking here lol!')
+
+
+     
+    else:
+      print('you are not an extraverted person! But that is really nice!')
+
+
+
+
