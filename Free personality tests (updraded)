@@ -1,0 +1,75 @@
+print('Hallo! Welcome to the personality tests!')
+
+name = input ('What is your name?')
+#age = input ('What is your age?')
+age = int(input('what is your age?'))
+optimal_friend_num = 10
+
+
+# the input auto assume all the inputs you type are string, so you need to int() the age to make it works 
+
+#is_older = int(age) >=  18 
+#print(is_older)
+
+
+
+if age >= 18:
+  print('You are old enough to learn about your personality type!')
+
+  wants_to_play = input('Do you want to play? '). lower()
+  if wants_to_play == 'yes':
+    print('let us play! Your initial optimal friend number is', optimal_friend_num, '!' )
+
+
+
+    e_or_i = input('Do you enjoy socialising or living alone more? (social/alone)')
+    if e_or_i == 'social':
+      ans = input ('you are eligible to join the entravert family. Do you like to trust your feeling or thinking more? (feeling/thinking)' )
+
+      if ans == 'feeling':
+        print('you are a EF')
+        optimal_friend_num +=15
+
+
+      elif ans == 'thinking':
+        print('you are a ET')
+      
+        optimal_friend_num +=16
+
+      ans = input ('when you notice someone or some environments, would you tend to judge or try to understand first? (judge/perceive)')
+      if ans == 'judge':
+        print('olala, you are good at making decisions based on details') 
+        optimal_friend_num -= 10
+
+      else:
+        print('you are more sympathetic than most people!')
+      
+  
+    else:
+      print('you are not an extraverted person! But that is really nice!')
+
+    feedback_or_not = input ('Would you like to tell us how accurate the result is so we can imporve on it, please? (yes/no)')
+    if feedback_or_not == 'yes' or 'no':
+      print ('I am joking! We are still working on the feedback system!')
+
+
+
+    
+
+   
+
+
+  else:
+    print('see you bye')
+ 
+elif age >= 14:
+  print('You can play with your family!')
+
+else: 
+  print ('You need to wait', 18-age ,'years to play the game!')
+
+feedback_or_not_2 = input ('Would you like to tell us how accurate the result is so we can imporve on it, please? (yes/no)')
+if feedback_or_not_2 == 'yes' or 'no':
+      print ('I am joking! We are still working on the feedback system!')
+
+
