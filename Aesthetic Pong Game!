@@ -1,0 +1,135 @@
+
+import turtle
+
+wn =  turtle.Screen()
+wn.title('pong by @JessicaLai')
+wn. bgcolor('pink')
+wn.setup(width=800, height=600)
+wn.tracer(0)
+
+# score
+score_a = 0
+score_b = 0
+
+
+
+
+
+
+
+
+# paddle A
+paddle_a = turtle.Turtle() # the function is in lower case, the second class name is capitalised
+paddle_a.speed(0) # the speed of the automation
+paddle_a.shape('square')
+paddle_a.color('white')
+paddle_a.shapesize(stretch_wid=5, stretch_len=1)  # expand the width 5x, and the length unchanged
+paddle_a.penup()
+paddle_a.goto(-350, 0)  # (0,0) is the central axis of the screen
+
+# paddle B
+
+paddle_b = turtle.Turtle() # the function is in lower case, the second class name is capitalised
+paddle_b.speed(0) # the speed of the automation
+paddle_b.shape('square')
+paddle_b.color('white')
+paddle_b.shapesize(stretch_wid=5, stretch_len=1)  # expand the width 5x, and the length unchanged
+paddle_b.penup()
+paddle_b.goto(350, 0)  # (0,0) is the central axis of the screen
+
+
+# ball
+
+ball = turtle.Turtle() # the function is in lower case, the second class name is capitalised
+ball.speed(0) # the speed of the automation
+ball.shape('square')
+ball.color('white')
+ball.shapesize(stretch_wid=1, stretch_len=1)  # expand the width 5x, and the length unchanged
+ball.penup()
+ball.goto(0, 0)  # (0,0) is the central axis of the screen
+ball.dx = 2  # every time the ball moves, it moves by 2 pixels right (+x) / up (+y)
+ball.dy = -2 # when i change 2 to -2, the first move change from up to down
+
+# pen / to make the score
+pen =turtle.Turtle()
+pen.speed(0)
+pen.color('blue')
+pen.penup() # to prevent the line moving in the screen
+pen.hideturtle()
+pen.goto(0,260)  #below the 300 height limit
+pen.write('playerA: 0 playerB: 0', align='center', font=('courier', 24, 'normal'))
+
+
+
+
+
+# function to move the paddle
+
+def paddle_a_up():
+    # the first step of creating a function is to define it
+    y = paddle_a.ycor()  # assign a value to y; the ycor function is from the turtle module
+    y += 20  # adding 20 to the y cor
+    paddle_a.sety(y)
+
+def paddle_a_down():
+    y = paddle_a.ycor()  # assign a value to y; the ycor function is from the turtle module
+    y -= 20  # adding 20 to the y cor
+    paddle_a.sety(y)
+def paddle_b_up():
+
+    y = paddle_b.ycor()  # assign a value to y; the ycor function is from the turtle module
+    y += 20  # adding 20 to the y cor
+    paddle_b.sety(y)
+
+def paddle_b_down():
+    y = paddle_b.ycor()  # assign a value to y; the ycor function is from the turtle module
+    y -= 20  # adding 20 to the y cor
+    paddle_b.sety(y)
+
+    # keyboad binding to call the function to make it works
+wn.listen()  # these codes start form the same line
+wn.onkeypress(paddle_a_up, 'w')  # calling the function paddle_a_up above
+wn.onkeypress(paddle_a_down, 's')
+wn.onkeypress(paddle_b_up, 'Up')
+wn.onkeypress(paddle_b_down, 'Down')  # Up and Down are the up/down next to shift
+
+
+# main gain loop
+while True:
+    wn.update() # every time the loop runs, it updates the screen
+
+    # move the ball
+    ball.setx(ball.xcor() + ball.dx)
+    ball.sety(ball.ycor() + ball.dy)
+
+    # boarder check
+    if ball.ycor() > 290:
+        ball.sety(290) # since the height is 600, the upside is 300, down is -300 in the y axis
+        ball.dy *= -1  # reverse the direction of the ball
+    if ball.ycor() < -290:
+        ball.sety(-290) # since the height is 600, the upside is 300, down is -300 in the y axis
+        ball.dy *= -1
+
+    if ball.xcor() > 390:
+        ball.goto(0, 0)  # since the width is 800, the upside is 400, down is -400 in the y axis
+        ball.dx *= -1
+        score_a +=1
+        pen.clear()
+        pen.write('playerA: {} playerB: {}'.format(score_a, score_b), align='center', font=('courier', 24, 'normal'))
+
+    if ball.xcor() < -390:
+        ball.goto(0, 0)
+        ball.dx *= -1
+        score_b += 1
+        pen.clear()
+        pen.write('playerA: {} playerB: {}'.format(score_a, score_b), align='center', font=('courier', 24, 'normal'))
+        # but this only print the new number on the 0 , need to use the clea()
+    # paddle and ball collusions
+    if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor() + 40 and ball.ycor() > paddle_b.ycor() -40):
+       ball.setx(340)
+       ball.dx *= -1
+
+    if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < paddle_a.ycor() + 40 and ball.ycor() > paddle_a.ycor() -40):
+       ball.setx(-340)
+       ball.dx *= -1
+
