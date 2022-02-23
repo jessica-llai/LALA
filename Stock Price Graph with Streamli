@@ -1,0 +1,34 @@
+
+
+import yfinance as yf
+import streamlit as st
+import pandas as pd
+
+
+st.write(''' 
+
+# a simple stock price app for Google
+
+''')
+
+tickerSymbol = 'GOOGL'
+
+tickerData = yf.Ticker(tickerSymbol)
+
+tickerDf = tickerData.history(period='1d', start='2010-5-31', end ='2022-2-22')
+
+
+
+st.write('''
+# Closing Price 
+''')
+st.line_chart(tickerDf.Close)
+st.write('''
+# Volume 
+''')
+st.line_chart(tickerDf.Volume)
+
+
+# to activate the app, run ' streamlit run /Users/lym/PycharmProjects/snake/main.py' in the terminal
+# if you double clip you get the original format 
+
