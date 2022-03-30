@@ -1,0 +1,82 @@
+
+<main id="main-doc">
+  <nav id="navbar">Navigation 
+    <header>
+      <a class="nav-link" href="#economic_growth">economic_growth</a>
+      <a class="nav-link" href="#economic_development">economic_development</a>
+    <a class="nav-link" href="#productivity_TFP">productivity_TFP</a>
+    <a class="nav-link" href=tech_GPT>tech_GPT</a>
+    <a class="nav-link" href="tech_ICT">tech_ICT</a></header>
+  
+  </nav>
+  
+  
+  <img src="https://www.environmentandsociety.org/sites/default/files/styles/popup/public/thumbnails/image/ve_anthro-comic03-steam-engine.jpg?itok=8NYT2G39" alt="main tech in 18th century" id="img">
+  
+  <h2>Key Concepts</h2>
+  <section class="main-section">
+    <header id="economic_growth"> economic_growth</header>
+    <p>output growth</p>
+    <p>productivity growth</p>
+  </section>
+  <section class="main-section">
+    <header id="economic_development">economic-development</header>
+    <p>living standards</p>
+    <p>ESG</p>
+    </section>
+  <section class="main-section">
+    <header id="productivity_TFP">productivity_TFP</header>
+    <p>measurement of productivity growth rate</p>
+    <p>a residual in the neo-classical solow model</p>
+    </section>
+  <section class="main-section">
+    <header id="tech_GPT">tech_GPT</header>
+    <p>upstream</p>
+    <p>long lag</p>
+    <ul>
+      <li>steam</li>
+      <li>electricity</li>
+      <li>railway</li>
+      <li>ICT</li>
+      <li>GM tech</li>
+    </ul>
+    </section>
+  <section class="main-section">
+    <header id="tech_ICT">tech_ICT</header>
+    <p>information and communication technology</p>
+    <p><ul><li>radio</li><li> TV </li><li>phone</li> <li>laptop</li></ul></p>
+  <article> 
+    <code>
+    </code>
+    <code>
+    </code>
+    <code>
+    </code>
+    <code>
+    </code>
+    <code>
+    </code>
+    </article>
+    </section>
+<article>
+    <h2>preliminary reading</h2>
+    <ul>
+    <li>
+      G Clark A Farewell to Alms: a brief economic history of the world (Princeton University Press, 2007)</li>
+    <li>
+      R C Allen Global Economic History: A Very Short Introduction (Oxford University Press, 2011)</li>
+    <li>
+      N F R Crafts and P Fearon The Great Depression of the 1930s: lessons for today (Oxford University Press, 2013)</li>
+    <li>
+      S L Engerman and K L Sokoloff  Economic Development in the Americas since 1500: endowments and institutions (Cambridge University Press, 2012)</li>
+    <li>
+      C Goldin and L Katz The Race between Education and Technology (Harvard University Press, 2008)</li>
+     <li>D C North, J J Wallis and B Weingast Violence and Social Orders: a conceptual framework for interpreting recorded human history (Cambridge University Press, 2009)</li>
+  </ul></article>
+  
+  
+  
+</main>
+<footer>copyrights: Yijing Lai</footer>
+
+
