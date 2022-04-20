@@ -1,0 +1,28 @@
+# Function 
+# summarise info 
+df.info()/describe()/head()/tail()
+
+
+# Dataframe / df 
+It turns dictionary into a table with columns (key) and rows (values)
+It also works with a dictionary including series or Numpy ndarray 
+method can add: 
+abs() Return a Series/DataFrame with absolute numeric value of each element.
+agg()
+append()...
+
+# Pandas 
+pd.to_datetime 
+pandas.to_datetime(arg, errors='raise', dayfirst=False, yearfirst=False, utc=None, format=None, exact=True, unit=None, infer_datetime_format=False, origin='unix', cache=True)
+arguement: int, float, str, datetime, list, tuple, dataframe, dict 
+format: can be %d-%m-%y, the connection - can replaced with / 
+
+merge
+newdf = pd.merge(a,b, on='id') 
+on indicates the common columns in two sets of data 
+
+drop 
+df.drop()
+example: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html
+
+
